@@ -37,3 +37,16 @@ Things to consider:
 	<li>if self closing the cfmodule tag, then the start and end modes will occur</li>
 	<li>if not self closed, only the start mode will occur</li>
 </ul>
+
+
+<h3>Tag Libraries</h3>
+Tag libraries are collections of modules that can be referenced under a specified tag prefix.
+Import a tag library using the &lt;cfimport taglib="directory"&gt;
+
+<pre>&lt;cfimport taglib="/WEB-INF/mytaglib" prefix="wy"&gt;</pre>
+
+Reference the tags by the file name and the prefix specified in the cfimport tag
+
+<pre>&lt;wy:tagname attr1="valu1" /&gt;</pre>
+
+When importing tab libraries, the import is only good for the file that it is in. If a custom tag from a tag library is desired to be used inside of a file that has been included using cfinclude or cfmodule, the cfimport tag must be used again to import the tag library into the context of that file.

@@ -1,13 +1,59 @@
 <h2>CFML Components</h2>
-Closest thing to an class/object as you'll find in CFML
+Closest thing to a class/object as you'll find in CFML
 
 <h3>Define a Component</h3>
+Using &lt;cfcomponent&lt; tag in tags
+&lt;cfcomponent&gt;
+	&lt;!--- cfc content here ---&gt;
+&lt;/cfcomponent&lt;
 
+Using "component" keyword in cfscript
+<pre>
+component output="false" {
+	// cfc content here
+}
+</pre>
 
 <h3>Data Members</h3>
+Created using the "this" scope in a cfc.
 
+In tags:
+<pre>
+&lt;cfcomponent&gt;
+	&lt;cfset this.dataMember = "" /&gt;
+	&lt;!--- cfc content here ---&gt;
+&lt;/cfcomponent&lt;
+</pre>
+
+In cfscript:
+<pre>
+component output="false" {
+	this.dataMember = "";
+	// cfc content here
+}
+</pre>
 
 <h3>Functions</h3>
+Define functions inside CFCs
+
+In tags:
+<pre>
+&lt;cfcomponent&gt;
+	&lt;cffunction name="myFunc1"&gt;
+		&lt;!--- does stuff ---&gt;
+	&lt;/cffunction&gt;
+&lt;/cfcomponent&lt;
+</pre>
+
+In cfscript:
+<pre>
+component output="false" {
+	function() {
+		// does stuff
+	}
+}
+</pre>
+
 
 <h4>Access Modifiers</h4>
 
