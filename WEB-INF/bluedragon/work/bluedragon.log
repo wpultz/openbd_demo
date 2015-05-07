@@ -1,0 +1,64 @@
+
+]--- Logging Started ------[
+06/05/15 22:53.13: RunTimeError Directory=[/Users/wyatt/Sites/openbd_demo/WEB-INF/bluedragon/work/temp/rtelogs], Max=[100]
+06/05/15 22:53.13: BlueDragon WorkingDirectory=[/Users/wyatt/Sites/openbd_demo/WEB-INF/bluedragon/work]
+06/05/15 22:53.13: BlueDragon TempDirectory=[/Users/wyatt/Sites/openbd_demo/WEB-INF/bluedragon/work/temp]
+06/05/15 22:53.13: OutgoingMailServer started mainDirectory=/Users/wyatt/Sites/openbd_demo/WEB-INF/bluedragon/work/cfmail
+06/05/15 22:53.13: CollectionFactory.init(): no <cfcollection> found in configuration
+06/05/15 22:53.13: BlueDragon server is starting up...
+06/05/15 22:53.13: Product Version: 3.2
+06/05/15 22:53.13: Build date: 2015-04-20 04:03:09 GMT
+06/05/15 22:53.13: tagChecker loaded: 140 tags
+06/05/15 22:53.13: cfmlFileCache Configuration. Caching=1000 files; trusted cache=false
+06/05/15 22:53.13: cfmlFileCache.loadCustomTagMappings [CF_] >> [/WEB-INF/customtags]
+06/05/15 22:53.13: cfmlFileCache.loadCFMappings: no CF mappings defined.
+06/05/15 22:53.13: PluginManager Auto Discovery (openbdplugin-XXXX.jar) ...
+06/05/15 22:53.13: ... found: 0 plugins
+06/05/15 22:53.13: cfEngine: Using default character encoding utf-8
+06/05/15 22:53.13: cfEngine: WebResourcePath /Users/wyatt/Sites/openbd_demo/WEB-INF/webresources
+06/05/15 22:53.13: cfEngine: server.system.nativelibdir=[/WEB-INF/bin/x64/]
+06/05/15 22:53.13: queryBatchServer started: /Users/wyatt/Sites/openbd_demo/WEB-INF/bluedragon/work/cfquerybatch
+06/05/15 22:53.13: CFQUERY Connection pool validation queries: ENABLED
+06/05/15 22:53.13: MemoryDiskCache.function: MaxSize: 100
+06/05/15 22:53.13: MemoryDiskCache.function: Directory set: /Users/wyatt/Sites/openbd_demo/WEB-INF/bluedragon/work/cache-function
+06/05/15 22:53.13: MemoryDiskCache.function: Directory cleaned
+06/05/15 22:53.13: MemoryDiskCache.default: MaxSize: 25
+06/05/15 22:53.13: MemoryDiskCache.default: Directory set: /Users/wyatt/Sites/openbd_demo/WEB-INF/bluedragon/work/cache-default
+06/05/15 22:53.13: MemoryDiskCache.default: Directory cleaned
+06/05/15 22:53.13: MemoryDiskCache.cfquery: MaxSize: 200
+06/05/15 22:53.13: MemoryDiskCache.cfquery: Directory set: /Users/wyatt/Sites/openbd_demo/WEB-INF/bluedragon/work/cache-cfquery
+06/05/15 22:53.13: MemoryDiskCache.cfquery: Directory cleaned
+06/05/15 22:53.13: CFIMAP Caching Engine Initialised.
+06/05/15 22:53.13: cfChart: storage=file; size=0
+06/05/15 22:53.13: ScheduleEngine: Started. Initial Tasks=0
+06/05/15 22:53.13: scheduleEngine started; logfile=/Users/wyatt/Sites/openbd_demo/WEB-INF/bluedragon/work/cfschedule/schedule.log
+06/05/15 22:53.14: PlugIn.Load.Installed: org.alanwilliamson.openbd.plugin.spreadsheet.SpreadSheetExtension; SpreadSheet; Version=1.2011.11.4
+06/05/15 22:53.14: PlugIn.Load.Installed: org.alanwilliamson.openbd.plugin.cfsmtp.SmtpExtension; CFSMTP; Version=1.2011.11.4
+06/05/15 22:53.14: [LoginPlugin] <server>.<plugin>.<login>.<userfield>: no userfield specified
+06/05/15 22:53.14: PlugIn.Load.Installed: org.aw20.plugin.login.LoginExtension; LoginExtension; Version=1.2011.11.4
+06/05/15 22:53.14: PlugIn.Load.Installed: org.alanwilliamson.openbd.plugin.crontab.CronExtension; CronTab; Version=1.2011.11.4
+06/05/15 22:53.14: PlugIn.Load.Installed: com.bluedragon.mongo.MongoExtension; MongoExtension; Version=1.2011.11.4
+06/05/15 22:53.14: PlugIn.Load.Installed: org.alanwilliamson.openbd.plugin.salesforce.SalesForceExtension; SalesForce; Version=1.2177
+06/05/15 22:53.14: PlugIn.Load.Installed: com.bluedragon.vision.VisionExtension; Vision; Version=1.2177
+06/05/15 22:53.14: PlugIn.Load.Installed: com.bluedragon.profiler.ProfilerExtension; Profiler; Version=1.2392
+06/05/15 22:53.14: cfApplicationManager.DefaultClientStorage=[cookie]; J2EE Sessions=false
+06/05/15 22:53.14: MemoryDiskCache.cfcachecontent: MaxSize: 50
+06/05/15 22:53.14: MemoryDiskCache.cfcachecontent: Directory set: /Users/wyatt/Sites/openbd_demo/WEB-INF/bluedragon/work/cache-cfcachecontent
+06/05/15 22:53.14: MemoryDiskCache.cfcachecontent: Directory cleaned
+06/05/15 22:53.14: cfSCRIPT Registered: language=java; class=org.alanwilliamson.lang.java.cfSCRIPTJava
+06/05/15 22:53.14: cfSCRIPT Registered: language=javascript; class=org.alanwilliamson.lang.javascript.cfSCRIPTJavascript
+06/05/15 22:53.14: expressionEngine loaded: 711 functions
+06/05/15 22:53.14: cfEngine: [server.system.debug] Show Debug output on error? true
+06/05/15 22:53.14: cfEngine: [server.debugoutput.enabled] Show Debugger output? false
+06/05/15 22:53.14: cfEngine: [server.system.strictarraypassbyreference] Strict Mode: ArrayPassByReference? false
+06/05/15 22:53.14: cfEngine: [server.system.functionscopedvariables] Strict Mode: FunctionScopedVariables? false
+06/05/15 22:53.14: cfEngine: [server.system.assert] Assertions disabled
+06/05/15 22:53.14: cfEngine: [server.system.formurlcombined] Combined Form/Url Scope? false
+06/05/15 22:53.14: cfEngine: [server.system.legacyformvalidation] Legacy server side form validation? false
+06/05/15 22:53.14: cfEngine: JSON Encoding Defaults: server.system.jsoncase=maintain; server.system.jsondate=long
+06/05/15 22:53.14: cfEngine: [server.system.formurlmaintaincase] Case Form/Url maintained? false
+06/05/15 22:53.14: cfEngine: [server.system.cfoutputshorthand] <%= ... %> ? true
+06/05/15 22:53.14: JournalManager: Disabled; Set [server.system.journal] to enable
+06/05/15 22:53.14: BlueDragon has initialised. Ready for requests.
+06/05/15 22:53.14: /Server.cfc not available: /Server.cfc; exception:A request was made to a resource that could not be located
+06/05/15 22:53.17: cfApplicationManager.onApplicationStart: (unnamed application)

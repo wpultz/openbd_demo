@@ -1,0 +1,106 @@
+<h2>Data Types</h2>
+
+<ul>
+	<li>String</li>
+	<li>Numeric</li>
+	<li>Boolean</li>
+	<li>Struct</li>
+	<li>Array</li>
+	<li>Object</li>
+</ul>
+
+
+<h3>Type Checking</h3>
+<pre>
+<ul>
+	<li>IsArray( arrayName )</li>
+	<li>IsStruct( structName )</li>
+	<li>IsQuery( queryName )</li>
+	<li>IsSimpleValue( simpleVal )</li>
+	<li>IsNumeric( numberVal )</li>
+	<li>IsJSON( jsonStringVal )</li>
+	<li>IsDate( dateVal )</li>
+</ul>
+</pre>
+
+
+<h3>String</h3>
+What it sounds like
+
+<h3>Numeric</h3>
+Also typically what you would think of for a numeric value.<br />
+To ensure that a value is actually considered a numeric (in the case of a function argument typed as a numeric) use <pre>Fix()</pre>
+
+<h3>Boolean</h3>
+WTF Adobe
+Boolean values are one of the many banes of a cfml author's existence.
+<br /><br />
+true/false
+<br />
+0/1
+<br />
+YES/NO
+<br /><br />
+
+The engine has a habit of picking the one that you don't want when you don't want it.
+
+<h3>Struct</h3>
+aka Map, dictionary<br />
+Always use Implicit declaration, not StructNew(). Likewise, insert into the struct with dot notation or square brackets. Delete keys with StructDelete(). Merge structs with StructAppend()
+<pre>
+	var myMap = {};
+	myMap.key1 = "";
+	myMap[ "key2" ] = 123;
+
+	var anotherMap = {
+		key1: "some value",
+		key3: "",
+		key4: 123
+	};
+
+	// delete key3 from anotherMap
+	StructDelete( anotherMap, "key3" );
+
+	// merge keys from myMap into anotherMap without overwriting keys
+	StructAppend( anotherMap, myMap );
+
+	// merge keys from myMap into anotherMap with overwriting keys
+	StructAppend( anotherMap, myMap, true );
+
+	// iterate over keys in a struct
+	for( var k in anotherMap ) {
+		writeOutput( anotherMap[ k ] );
+	}
+</pre>
+
+<h3>Array</h3>
+Always use Implicit declaration, not ArrayNew().
+<pre>
+	var myArr = [];
+	ArrayAppend( myArr, "firstVal" );
+	ArrayAppend( myArr, "secondVal" );
+
+	var anotherArr = [ "thirdVal", "fourthVal" ];
+
+	// concat anotherArr to myArr
+	ArrayConcat( myArr, anotherArr );
+
+	// get length of myArr
+	var arrLen = ArrayLen( myArr );
+
+	// iterate over elements in Array
+	for( var i = 1; i <= ArrayLen( myArr ); i++ ) {
+		writeOutput( myArr[ i ] );
+	}
+
+	// iterate over element in array with tags
+	&lt;cfloop array="#myArr#" index="arrElem"&gt;
+		&lt;!--- "arrElem" refers to the current actual array element during in the iteration ---&gt;
+	&lt;/cfloop&gt;
+
+	// iterate over elements in array with tags using index and item
+	&lt;cfloop array="#myArr#" index="i" item="arrElem"&gt;
+		&lt;!--- "arrElem" refers to the current actual array element during in the iteration ---&gt;
+		&lt;!--- "i" refers to the index of the current element ---&gt;
+	&lt;/cfloop&gt;
+</pre>

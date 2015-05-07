@@ -1,0 +1,26 @@
+<h2>How to set variables</h2>
+<h3>tags</h3>
+<pre>&lt;cfset myVar = "stuff" /&gt;</pre>
+<h3>cfscript</h3>
+<nocfml>myVar = "stuff";</nocfml>
+
+<h2>When to var variables</h2>
+var variables when they are to be scoped inside of a function. using the "var" keyword outside of a function will cause an exception
+<h3>tags</h3>
+<pre>&lt;cfset var myVar = "stuff" /&gt;</pre>
+<h3>cfscript</h3>
+<nocfml>var myVar = "stuff";</nocfml>
+
+
+<h2>Executing functions</h2>
+<pre>invoke the function as usual, or inside of a &lt;cfset /&gt;</nocfml> tag</pre>
+<h3>tags</h3>
+<pre>
+	&lt;cfset myFunc() /&gt;<br />
+	&lt;cfset myVar = myFunc() /&gt;
+</pre>
+<h3>cfscript</h3>
+<pre>
+	myFunc();
+	myVar = myFunc();
+</pre>
