@@ -1,0 +1,56 @@
+<cfmodule template="/mod/_header.cfm" />
+
+	<h2>Variable Scopes</h2>
+	<p>There are many "scopes" of variables available for use in CFML<p>
+
+
+	<h3>Here are some of the most commonly used scopes...</h3>
+
+	<h3>Application</h3>
+	<p>Variables in the application scope are available throughout the application for the life of the application</p>
+
+	<h3>Server</h3>
+	<p>Available thoughout application code running on the same server</p>
+
+	<h3>URL</h3>
+	<p>Available throughout application code to reference query string arguments</p>
+
+	<h3>Session</h3>
+	<p>Available throughout application code during the life of the application. Limited to to a single user's session</p>
+
+	<h3>Request</h3>
+	<p>Available throughout application code for the duration of the page request. Does not persist beyond a single page load</p>
+
+	<h3>Variables</h3>
+	<p>Default scope. Scopes variables inside a function or cfc</p>
+
+	<h3>This</h3>
+	<p>Scopes variables inside a cfc</p>
+
+	<h3>Arguments</h3>
+	<p>Available inside a function to reference arguments passed to the function.</p>
+
+	<h3>Local</h3>
+	<p>Used to scope variables inside of a function with the "var" keyword</p>
+
+	<h3>Form</h3>
+	<p>Available throughout application to reference values POST'ed to a page</p>
+
+	<h3>Cookie</h3>
+	<p>Available througout application code to reference values of cookies for the application's domain</p>
+
+	<h3>What if I don't specify a scope?</h3>
+	<p>OpenBD will search for a variable of the same name through the scopes in this order...</p>
+	<ol>
+		<li>Local</li>
+		<li>Arguments</li>
+		<li>Variables</li>
+		<li>CGI</li>
+		<li>URL</li>
+		<li>Form</li>
+		<li>Cookie</li>
+	</ol>
+
+
+
+<cfmodule template="/mod/_footer.cfm" />
