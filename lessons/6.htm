@@ -1,3 +1,25 @@
 <cfmodule template="/mod/_header.cfm" />
 
+	<h2>Application.cfc</h2>
+	<p>Application.cfc is a special cfc that can be placed in a directory to control certain application level properties of the webapp code within that directory. It can be extended as any cfc can be.<p>
+
+	A few things you can control...
+	<ul>
+		<li>Session management</li>
+		<li>Application name and timeouts</li>
+		<li>Numerous hooks for page loads, catastrophic errors, and missing pages</li>
+	</ul>
+
+
+	<h3>onApplicationStart</h3>
+	<p>Called when the application is started, either for the first time or after an application timeout</p>
+	
+	<h3>onRequestStart</h3>
+	<p>When the requested page is found by the OpenBD engine, the onRequestStart function is called prior to processing the requested page. This is useful for prefetching data, checking user permissions, or setting up request properties</p>
+
+	<h3>onSessionStart</h3>
+	<p>When a new session is created, the onSessionStart function is called</p>
+
+	
+
 <cfmodule template="/mod/_footer.cfm" />
