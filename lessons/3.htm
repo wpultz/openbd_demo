@@ -5,7 +5,62 @@
 
 	<h3>cfif/cfelseif/cfelse</h3>
 
+	In tags...
+	<pre>
+		&lt;cfset myVar = 5 /&gt;
+		&lt;cfif myVar == 0&gt;
+			&lt;!--- do something ---&gt;
+		&lt;cfelseif myVar == 5&gt;
+			&lt;!--- do something different ---&gt;
+		&lt;cfelse&gt;
+			&lt;!--- default case ---&gt;
+		&lt;/cfif&gt;
+	</pre>
+
+	In cfscript...
+	<pre>
+		myVar = 5;
+		if( myVar == 0 ) {
+			// do something
+		} else if( myVar == 5 ) {
+			// do something else
+		} else {
+			// default case
+		}
+	</pre>
+
 
 	<h3>cfswitch</h3>
+
+	In tags...
+	<pre>
+		&lt;cfset myVar = 5 /&gt;
+		&lt;cfswitch expression="#myVar#"&gt;
+			&lt;cfcase value="0"&gt;
+				&lt;!--- do something ---&gt;
+			&lt;/cfcase&gt;
+			&lt;cfcase value="5"&gt;
+				&lt;!--- do something different ---&gt;
+			&lt;/cfcase&gt;
+			&lt;cfdefaultcase&gt;
+				&lt;!--- default case ---&gt;
+			&lt;/cfdefaultcase&gt;
+		&lt;/cfswitch&gt;
+	</pre>
+
+	In cfscript...
+	<pre>
+		myVar = 5;
+		switch( myVar ) {
+			case "0": 
+				// do something
+				break;
+			case "5":
+				// do something different
+				break;
+			default:
+				// default case
+		}
+	</pre>
 
 <cfmodule template="/mod/_footer.cfm" />

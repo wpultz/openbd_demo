@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <server>
-  <javacustomtags>
-    <classes>/WEB-INF/classes</classes>
-  </javacustomtags>
-  <cfquery>
-    <cache>true</cache>
-  </cfquery>
   <cfmail>
     <interval>240</interval>
     <smtpserver>127.0.0.1</smtpserver>
-    <charset>UTF-8</charset>
     <smtpport>25</smtpport>
+    <charset>UTF-8</charset>
   </cfmail>
+  <cfquery>
+    <cache>true</cache>
+  </cfquery>
+  <javacustomtags>
+    <classes>/WEB-INF/classes</classes>
+  </javacustomtags>
   <cfapplication>
-    <enabled>true</enabled>
     <clientstorage>cookie</clientstorage>
+    <enabled>true</enabled>
     <sessiontimeout>#CreateTimeSpan(0,0,20,0)#</sessiontimeout>
     <applicationtimeout>#CreateTimeSpan(2,0,0,0)#</applicationtimeout>
     <j2eesession>false</j2eesession>
@@ -38,12 +38,12 @@
     <missingtemplatehandler></missingtemplatehandler>
     <lastfile>/Users/wyatt/Sites/openbd_demo/WEB-INF/bluedragon/bluedragon.xml.bak.1</lastfile>
     <errorhandler></errorhandler>
-    <tempdirectory>/WEB-INF/bluedragon/work/temp</tempdirectory>
-    <password>admin</password>
     <buffersize>0</buffersize>
+    <password>admin</password>
+    <tempdirectory>/WEB-INF/bluedragon/work/temp</tempdirectory>
     <cfoutputshorthand>true</cfoutputshorthand>
-    <lastupdated>06/May/2015 22:53.14</lastupdated>
     <defaultcharset>utf-8</defaultcharset>
+    <lastupdated>07/May/2015 13:33.16</lastupdated>
   </system>
   <fonts>
     <dirs>C:\Windows\Fonts</dirs>

@@ -84,4 +84,23 @@
 	In cfscript...
 	<pre>component output="false" extends="anotherComponent" {</pre>
 
+
+	<h3>Calling a few CFCs</h3>
+
+	<cfscript>
+		obj = new util();
+		obj2 = new util2();
+		obj3 = new childUtil();
+		obj4 = new childUtil2();
+
+		writeOutput( obj.doSomething( "value" ) );
+		writeOutput( obj2.doSomething( "value" ) );
+		writeDump( obj.doSomethingElse( "value") );
+		writeDump( obj2.doSomethingElse( "value" ) );
+		writeDump( obj3.doSomethingElse( "child value" ) );
+		writeDump( obj4.doSomethingElse( "child value" ) );
+		writeDump( obj3.anotherFunc() );
+		writeDump( obj4.anotherFunc() );
+	</cfscript>
+
 <cfmodule template="/mod/_footer.cfm" />
