@@ -1,4 +1,6 @@
-<cfmodule template="/mod/_header.cfm" />
+<cfimport taglib="/mod" prefix="wy" />
+
+<wy:_page>
 
 	<h2>Templates and Modules</h2>
 	aka partials or views<br /><br />
@@ -18,7 +20,7 @@
 	Meanwhile in includefile.inc...
 
 	<pre>
-	we can output stuff from the attributes like so: &lt;cfoutput&gt;#attributes.val1#&lt;/cfoutput&gt;
+	we can output stuff from the attributes like so: &lt;cfoutput&gt;#attributes.arg1#&lt;/cfoutput&gt;
 	</pre>
 
 	<h3>The various execution modes of modules</h3>
@@ -54,4 +56,4 @@
 
 	When importing tab libraries, the import is only good for the file that it is in. If a custom tag from a tag library is desired to be used inside of a file that has been included using cfinclude or cfmodule, the cfimport tag must be used again to import the tag library into the context of that file.
 
-<cfmodule template="/mod/_footer.cfm" />
+</wy:_page>

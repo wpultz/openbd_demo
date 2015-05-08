@@ -1,3 +1,5 @@
+
+
 <cfmodule template="/mod/_header.cfm" />
 
 	<h2>Data Types</h2>
@@ -8,6 +10,7 @@
 		<li>Boolean</li>
 		<li>Struct</li>
 		<li>Array</li>
+		<li>Query</li>
 		<li>Object</li>
 	</ul>
 
@@ -39,12 +42,38 @@
 	<br /><br />
 	true/false
 	<br />
-	0/1
+	1/0
 	<br />
 	YES/NO
+	<br />
+	yes/no
 	<br /><br />
 
 	The engine has a habit of picking the one that you don't want when you don't want it.
+
+	<cfscript>
+if( "YES" ) {
+	writeOutput( "YES worked" );
+}
+if( "yes" ) {
+	writeOutput( "yes worked" );
+}
+if( "NO" ) {
+} else {
+	writeOutput( "NO worked" );
+}
+if( "no" ) {
+} else {
+	writeOutput( "no worked" );
+}
+if( 0 ) {
+} else {
+	writeOutput( "0 worked" );
+}
+if( 1 ) {
+	writeOutput( "1 worked" );
+}
+</cfscript>
 
 	<h3>Struct</h3>
 	aka Map, dictionary<br />

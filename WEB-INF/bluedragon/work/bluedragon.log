@@ -65,3 +65,8 @@
 08/05/15 08:13.42: BlueDragon has initialised. Ready for requests.
 08/05/15 08:13.42: /Server.cfc not available: /Server.cfc; exception:A request was made to a resource that could not be located
 08/05/15 08:14.09: cfApplicationManager.onApplicationStart: (unnamed application)
+08/05/15 10:49.36: RTE: C:\Users\wpultz\git\openbd_demo\WEB-INF\bluedragon\work\temp\rtelogs\bderror-2015-05-08-104936_659140995969891487.html
+08/05/15 10:49.52: RTE: C:\Users\wpultz\git\openbd_demo\WEB-INF\bluedragon\work\temp\rtelogs\bderror-2015-05-08-104952_3046175665712940936.html
+08/05/15 10:49.55: RTE: C:\Users\wpultz\git\openbd_demo\WEB-INF\bluedragon\work\temp\rtelogs\bderror-2015-05-08-104955_4198658665864740523.html
+08/05/15 11:18.45: RTE: C:\Users\wpultz\git\openbd_demo\WEB-INF\bluedragon\work\temp\rtelogs\bderror-2015-05-08-111845_5594480893193865005.html
+08/05/15 11:21.44: RTE: C:\Users\wpultz\git\openbd_demo\WEB-INF\bluedragon\work\temp\rtelogs\bderror-2015-05-08-112144_2804222936779844533.html
