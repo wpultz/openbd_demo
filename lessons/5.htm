@@ -1,65 +1,87 @@
-<h2>CFML Components</h2>
-Closest thing to a class/object as you'll find in CFML
+<cfmodule template="/mod/_header.cfm" />
 
-<h3>Define a Component</h3>
-Using &lt;cfcomponent&lt; tag in tags
-&lt;cfcomponent&gt;
-	&lt;!--- cfc content here ---&gt;
-&lt;/cfcomponent&lt;
+	<h2>CFML Components</h2>
+	Closest thing to a class/object as you'll find in CFML<br /><br />
+	<strong>See example cfcs in /WEB-INF/customtags/</strong>
 
-Using "component" keyword in cfscript
-<pre>
-component output="false" {
-	// cfc content here
-}
-</pre>
+	<h3>Define a Component</h3>
+	Using &lt;cfcomponent&lt; tag in tags
+	&lt;cfcomponent&gt;
+		&lt;!--- cfc content here ---&gt;
+	&lt;/cfcomponent&lt;
 
-<h3>Data Members</h3>
-Created using the "this" scope in a cfc.
-
-In tags:
-<pre>
-&lt;cfcomponent&gt;
-	&lt;cfset this.dataMember = "" /&gt;
-	&lt;!--- cfc content here ---&gt;
-&lt;/cfcomponent&lt;
-</pre>
-
-In cfscript:
-<pre>
-component output="false" {
-	this.dataMember = "";
-	// cfc content here
-}
-</pre>
-
-<h3>Functions</h3>
-Define functions inside CFCs
-
-In tags:
-<pre>
-&lt;cfcomponent&gt;
-	&lt;cffunction name="myFunc1"&gt;
-		&lt;!--- does stuff ---&gt;
-	&lt;/cffunction&gt;
-&lt;/cfcomponent&lt;
-</pre>
-
-In cfscript:
-<pre>
-component output="false" {
-	function() {
-		// does stuff
+	Using "component" keyword in cfscript
+	<pre>
+	component output="false" {
+		// cfc content here
 	}
-}
-</pre>
+	</pre>
+
+	<h3>Data Members</h3>
+	Created using the "this" scope in a cfc.
+
+	In tags:
+	<pre>
+	&lt;cfcomponent&gt;
+		&lt;cfset this.dataMember = "" /&gt;
+		&lt;!--- cfc content here ---&gt;
+	&lt;/cfcomponent&lt;
+	</pre>
+
+	In cfscript:
+	<pre>
+	component output="false" {
+		this.dataMember = "";
+		// cfc content here
+	}
+	</pre>
+
+	<h3>Functions</h3>
+	Define functions inside CFCs
+
+	In tags:
+	<pre>
+	&lt;cfcomponent&gt;
+		&lt;cffunction name="myFunc1"&gt;
+			&lt;!--- does stuff ---&gt;
+		&lt;/cffunction&gt;
+	&lt;/cfcomponent&lt;
+	</pre>
+
+	In cfscript:
+	<pre>
+	component output="false" {
+		function() {
+			// does stuff
+		}
+	}
+	</pre>
 
 
-<h4>Access Modifiers</h4>
+	<h4>Access Modifiers</h4>
+	<ul>
+		<li>public</li>
+		<li>private</li>
+		<li>remote</li>
+		<li>protected</li>
+	</ul>
 
-<h4>Return Types</h4>
+	<h4>Return Types</h4>
+	Any of the cfml types
 
-<h4>Return Format</h4>
+	<h4>Return Format</h4>
+	<ul>
+		<li>plain</li>
+		<li>JSON</li>
+	</ul>
 
+	<h3>Inheritance</h3>
+	Extend a cfc with another cfc using the "extends" keyword
 
-<h3>Inheritance</h3>
+	In tags...
+	<pre>&lt;cfcomponent output="false" extends="anotherComponent"&gt;</pre>
+
+	In cfscript...
+	<pre>component output="false" extends="anotherComponent" {</pre>
+
+<cfmodule template="/mod/_footer.cfm" />

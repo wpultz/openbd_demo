@@ -1,52 +1,57 @@
-<h2>Templates and Modules</h2>
-aka partials or views
+<cfmodule template="/mod/_header.cfm" />
 
-<h3>Templates and cfinclude</h3>
-use the &lt;cfinclude&gt; tag to include another cfml file.
-files intended as include files are typically named with a ".inc" extension.
+	<h2>Templates and Modules</h2>
+	aka partials or views<br /><br />
+	<strong>see example templates in /mod/</strong>
 
-<pre>&lt;cfinclude template="includefile.inc" /&gt;</pre>
+	<h3>Templates and cfinclude</h3>
+	use the &lt;cfinclude&gt; tag to include another cfml file.
+	files intended as include files are typically named with a ".inc" extension.
 
-<h3>Modules and cfmodule</h3>
-use the &lt;cfmodule&gt; tag to include another cfml file and pass in values via tag attributes.
+	<pre>&lt;cfinclude template="includefile.inc" /&gt;</pre>
 
-<pre>&lt;cfmodule template="includefile.inc" arg1="val1" arg2="val2" /&gt;</pre>
+	<h3>Modules and cfmodule</h3>
+	use the &lt;cfmodule&gt; tag to include another cfml file and pass in values via tag attributes.
 
-Meanwhile in includefile.inc...
+	<pre>&lt;cfmodule template="includefile.inc" arg1="val1" arg2="val2" /&gt;</pre>
 
-<pre>
-we can output stuff from the attributes like so: &lt;cfoutput&gt;#attributes.val1#&lt;/cfoutput&gt;
-</pre>
+	Meanwhile in includefile.inc...
 
-<h3>The various execution modes of modules</h3>
-<pre>
-&lt;!--- start mode ---&gt;
-&lt;cfif thistag.executionmode == "start"&gt;
-	&lt;!--- set up data for tag, or some opening markup ---&gt;
-&lt;/cfif&gt;
+	<pre>
+	we can output stuff from the attributes like so: &lt;cfoutput&gt;#attributes.val1#&lt;/cfoutput&gt;
+	</pre>
 
-&lt;!--- end mode, or there is no end tag ---&gt;
-&lt;cfif thistag.executionmode == "end" || !thistag.hasEndTag&gt;
-	&lt;!--- output the rest of the desired content for the tag ---&gt;
-&lt;/cfif&gt;
-</pre>
+	<h3>The various execution modes of modules</h3>
+	<pre>
+	&lt;!--- start mode ---&gt;
+	&lt;cfif thistag.executionmode == "start"&gt;
+		&lt;!--- set up data for tag, or some opening markup ---&gt;
+	&lt;/cfif&gt;
 
-Things to consider:
-<ul>
-	<li>when using cfmodule, the include template is processed twice, once start, and once on end</li>
-	<li>if self closing the cfmodule tag, then the start and end modes will occur</li>
-	<li>if not self closed, only the start mode will occur</li>
-</ul>
+	&lt;!--- end mode, or there is no end tag ---&gt;
+	&lt;cfif thistag.executionmode == "end" || !thistag.hasEndTag&gt;
+		&lt;!--- output the rest of the desired content for the tag ---&gt;
+	&lt;/cfif&gt;
+	</pre>
+
+	Things to consider:
+	<ul>
+		<li>when using cfmodule, the include template is processed twice, once start, and once on end</li>
+		<li>if self closing the cfmodule tag, then the start and end modes will occur</li>
+		<li>if not self closed, only the start mode will occur</li>
+	</ul>
 
 
-<h3>Tag Libraries</h3>
-Tag libraries are collections of modules that can be referenced under a specified tag prefix.
-Import a tag library using the &lt;cfimport taglib="directory"&gt;
+	<h3>Tag Libraries</h3>
+	Tag libraries are collections of modules that can be referenced under a specified tag prefix.
+	Import a tag library using the &lt;cfimport taglib="directory"&gt;
 
-<pre>&lt;cfimport taglib="/WEB-INF/mytaglib" prefix="wy"&gt;</pre>
+	<pre>&lt;cfimport taglib="/WEB-INF/mytaglib" prefix="wy"&gt;</pre>
 
-Reference the tags by the file name and the prefix specified in the cfimport tag
+	Reference the tags by the file name and the prefix specified in the cfimport tag
 
-<pre>&lt;wy:tagname attr1="valu1" /&gt;</pre>
+	<pre>&lt;wy:tagname attr1="valu1" /&gt;</pre>
 
-When importing tab libraries, the import is only good for the file that it is in. If a custom tag from a tag library is desired to be used inside of a file that has been included using cfinclude or cfmodule, the cfimport tag must be used again to import the tag library into the context of that file.
+	When importing tab libraries, the import is only good for the file that it is in. If a custom tag from a tag library is desired to be used inside of a file that has been included using cfinclude or cfmodule, the cfimport tag must be used again to import the tag library into the context of that file.
+
+<cfmodule template="/mod/_footer.cfm" />
